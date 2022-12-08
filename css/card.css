@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,400;1,500&family=Source+Code+Pro:wght@300;400;500;600&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: var(--font-color);
+    font-family: 'DM Mono', monospace;
+}
+
+.repo-header .error {
+    display: inline;    
+    width: 350px;
+    min-width: 150px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'DM Mono', monospace;
+    text-align: start;
+    padding-left: 10px;
+    font-weight: 700;
+    border-radius: 8px;
+    color: rgb(185, 41, 41);
+    font-size: .6rem;
+    border: 1px solid rgb(185, 41, 41);
+}
+
+.repo-header {
+    width: 100vw;
+    min-width: 250px;
+    text-align: center;
+    padding-top: 100px;
+    display: block;
+}
+.repo-header > input {
+    display: inline;    
+    width: 350px;
+    min-width: 150px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'DM Mono', monospace;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+.repo-header > button {
+    min-width: 200px;
+    height: 34px;
+    background: linear-gradient(90deg, #ff8a00, rgba(150, 38, 1, 0.933));
+    border: none;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: -5px 8px #723d00;
+    cursor: pointer;
+    /* box-shadow: 5px 5px 5px #693800; */
+}
+
+.title {
+    font-size: 3rem;
+    color: Lighten(#000, 10%)
+}
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+    transition: 2s;
+}
+
+.card-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    
+    border-radius: 16px;
+    background: var(--secondary-color);
+    color: var(--font-color);
+    box-shadow: -1rem 0 .5rem #000;
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+
+.author-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+}
+
+.half-circle {
+    position: absolute;
+    bottom:  0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: #ff8a00;
+    stroke-width: 8;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.author-name-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+    /* margin-left: 40px; */
+}
+
+.card-header h2:hover {
+    background: linear-gradient(90deg, #ff8a00, rgba(150, 38, 1, 0.933));
+    text-shadow:none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    width: 20px;
+    font-size: 1.5rem;
+}
+a:hover {
+    background: linear-gradient(90deg, #ff8a00, rgba(150, 38, 1, 0.933));
+    text-shadow:none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
